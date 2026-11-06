@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Early Outbreak Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>COVID-19 Early Outbreak Dashboard</h1>
+            <p>February - March 2020</p>
+
+            <div class="controls">
+                <label for="countrySelect">Select Country: </label>
+                <select id="countrySelect"></select>
+            </div>
+        </header>
+
+        <section class="metrics-grid">
+            <div class="card warning">
+                <h3>Confirmed Cases</h3>
+                <p id="metric-confirmed">--</p>
+            </div>
+            <div class="card danger">
+                <h3>Deaths</h3>
+                <p id="metric-deaths">--</p>
+            </div>
+            <div class="card success">
+                <h3>Recovered</h3>
+                <p id="metric-recovered">--</p>
+            </div>
+            <div class="card active-cases">
+                <h3>Active Cases</h3>
+                <p id="metric-active">--</p>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="chart-container">
+                <h2>Cumulative Trends</h2>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Daily New Cases</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
